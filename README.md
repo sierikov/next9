@@ -46,3 +46,4 @@ There is complete list of all routes:
 
 - React
 - Next
+- Chakra UI
