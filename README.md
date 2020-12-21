@@ -42,6 +42,15 @@ There is complete list of all routes:
     http://localhost:3000/user/123a?action=create&darkmode=false
     ```
 
+## Endpoints
+
+There is complete list of all endpoints:
+
+| Enpoint          | Method        | Params                      |
+| ---------------- |:-------------:| :-------------------------- |
+| `/api/hello`     | `GET`         | -                           |
+| `/api/user/:id`  | `GET`         | `id` of type `Number`       |
+
 ## Techologies
 
 - React
