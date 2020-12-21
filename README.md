@@ -2,6 +2,8 @@
 
 This is a demonstration of Next.js 9 features.
 
+![Poster](public/poster.png)
+
 ## About
 
 Next.js is a fantastic framework that allows us to build performant server-side rendered React apps with ease.
