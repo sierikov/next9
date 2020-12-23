@@ -41,7 +41,13 @@ There is complete list of all routes:
     It also can parse *parametrs queries*. Try
 
     ```ulr
-    http://localhost:3000/user/123a?action=create&darkmode=false
+    http://localhost:3000/user/1?action=create&darkmode=false
+    ```
+
+    or if this `id` doesn't exist you'll become an error. Try
+
+    ```ulr
+    http://localhost:3000/user/100?action=create&darkmode=false
     ```
 
 ## Endpoints
@@ -58,3 +64,4 @@ There is complete list of all endpoints:
 - React
 - Next
 - Chakra UI
+- SWR
