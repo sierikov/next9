@@ -27,7 +27,7 @@ const BlogIndexPage: NextPage<{
           return (
             <Box
               marginY="1rem"
-              maxW="sm"
+              maxW="md"
               borderWidth="1px"
               borderRadius="lg"
               overflow="hidden"
