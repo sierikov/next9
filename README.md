@@ -28,7 +28,24 @@ To start development server simply type following in your terminal:
 yarn dev
 ```
 
-All scripts you'll find under **Scripts** section.
+All other scripts you'll find under **Scripts** section.
+
+### Auth0
+
+This section is optional. It's needed to enable a *secret page*
+(protected by `auth0`).
+
+Create an `env` file with following records, you can get these
+[here](https://auth0.com):
+
+- `AUTH0_DOMAIN` - domain for `auth0` server
+- `AUTH0_CLIENT_ID` - id of `auth0` client;
+- `AUTH0_CLIENT_SECRET` - secret for `auth0` client;
+- `SESSION_COOKIE_SECRET` - to encrypt cookies. You can generate one with
+
+    ```bash
+    openssl rand -base64 32
+    ```
 
 ## Routes
 
@@ -93,3 +110,4 @@ Exports the next app as static version of the site to `out` directory.
 - Next
 - Chakra UI
 - SWR
+- Auth0

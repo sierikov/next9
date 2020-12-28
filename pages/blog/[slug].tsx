@@ -10,8 +10,6 @@ import {
   Image,
 } from "@chakra-ui/core";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import { string } from "prop-types";
-import { title } from "process";
 
 const BlogPost: NextPage<{
   title: string;

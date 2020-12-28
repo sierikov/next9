@@ -4,7 +4,7 @@ import {
   Code,
   Flex,
   Heading,
-  Link,
+  Button,
   Spinner,
   SimpleGrid,
   Text,
@@ -13,25 +13,28 @@ import { NextPage } from "next";
 import { useRouter } from "next/router";
 import NextLink from "next/link";
 import useSWR from "swr";
+import fetch from "node-fetch";
+
+type Data = {
+  _id: string;
+  index: number;
+  guid: string;
+  age: number;
+  name: {
+    first: string;
+    last: string;
+  };
+  email: string;
+  greeting: string;
+  favoriteFruit: string;
+}
 
 const fetcher = async (url: string) => {
   const res = await fetch(url);
   if (!res.ok) {
     throw Error("Data cannot be loaded");
   }
-  const data: {
-    _id: string,
-    index: number,
-    guid: string,
-    age: number,
-    name: {
-      first: string,
-      last: string
-    },
-    email: string,
-    greeting: string,
-    favoriteFruit: string
-  } = await res.json();
+  const data: Data = await res.json();
   return data;
 };
 
@@ -73,7 +76,9 @@ const UserData = () => {
       <Text fontWeight="bold" marginRight={4}>
         Name
       </Text>
-      <Text>{data.name.first} {data.name.last}</Text>
+      <Text>
+        {data.name.first} {data.name.last}
+      </Text>
 
       <Text fontWeight="bold" marginRight={4}>
         Email
@@ -104,8 +109,10 @@ const User: NextPage = () => {
         other params
       </Heading>
       <Code marginBottom="2rem">{JSON.stringify(rest)}</Code>
-      <NextLink href="/" passHref>
-        <Link>Back to home</Link>
+      <NextLink href="/">
+        <Button leftIcon="arrow-back" variantColor="teal" variant="outline">
+          Back to home
+        </Button>
       </NextLink>
     </Flex>
   );
