@@ -3,3 +3,4 @@ node_modules
 .metals
 .next
 .env
+.idea
