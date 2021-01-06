@@ -5,6 +5,7 @@ module.exports = (phase, { env: parsed }) => {
   const isDev = phase === PHASE_DEVELOPMENT_SERVER;
 
   return {
+    distDir: 'dist',
     env: {
       REDIRECT_URI: isDev
         ? "http://localhost:3000/api/callback"
