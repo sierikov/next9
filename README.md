@@ -43,7 +43,7 @@ All other scripts you'll find under **Scripts** section.
 To start production ready server with `docker` run: 
 
 ```bash
-docker build -t latest . && docker run -p 3000:3000 --name next9 latest
+docker build -t next9 . && docker run -p 3000:3000 --name next9 next9 
 ```
 
 Now you can open the app in your browser <http://localhost:3000/>
