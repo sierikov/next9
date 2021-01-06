@@ -1,0 +1,5 @@
+node_modules
+.metals
+.next
+.vscode
+.dist
