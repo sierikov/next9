@@ -17,6 +17,11 @@ const IndexPage: NextPage = () => {
       <NextLink href="/user/2?action=create&darkmode=false" passHref>
         <Link> Some User</Link>
       </NextLink>
+      <NextLink href="/secret" passHref>
+        <Link>
+          Secret page
+        </Link>
+      </NextLink>
     </Flex>
   );
 };

@@ -13,7 +13,6 @@ import { NextPage } from "next";
 import { useRouter } from "next/router";
 import NextLink from "next/link";
 import useSWR from "swr";
-import fetch from "node-fetch";
 
 type Data = {
   _id: string;
@@ -40,13 +39,13 @@ const fetcher = async (url: string) => {
 
 const UserData = () => {
   const router = useRouter();
-  const { id } = router.query;
-  const { data, error } = useSWR(`/api/user/${id}`, fetcher);
+  const {id} = router.query;
+  const {data, error} = useSWR(`/api/user/${id}`, fetcher);
 
   if (error) {
     return (
       <Alert status="error">
-        <AlertIcon />
+        <AlertIcon/>
         Lodaing failed: {error.message}
       </Alert>
     );
@@ -55,7 +54,7 @@ const UserData = () => {
   if (!data) {
     return (
       <Alert status="info">
-        <Spinner marginRight={3} size="sm" />
+        <Spinner marginRight={3} size="sm"/>
         Loading...
       </Alert>
     );
@@ -95,7 +94,7 @@ const UserData = () => {
 
 const User: NextPage = () => {
   const router = useRouter();
-  const { id, ...rest } = router.query;
+  const {id, ...rest} = router.query;
   return (
     <Flex flexDirection="column" alignItems="center" margin={4}>
       <Heading as="h1" size="2xl" marginTop="2rem">
@@ -104,7 +103,7 @@ const User: NextPage = () => {
       <Heading as="h2" size="md" marginTop="1rem" marginBottom="2rem">
         data with id <Code>{id}</Code>
       </Heading>
-      <UserData />
+      <UserData/>
       <Heading as="h2" size="md" marginY="1rem">
         other params
       </Heading>

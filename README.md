@@ -66,15 +66,19 @@ There is complete list of all routes:
     ```ulr
     http://localhost:3000/user/100?action=create&darkmode=false
     ```
+- `/secret` - some *secret*. User needs to be logged in to see it. (Needs `.env` file)
 
 ## Endpoints
 
 There is complete list of all endpoints:
 
-| Enpoint          | Method        | Params                      |
-| ---------------- |:-------------:| :-------------------------- |
-| `/api/hello`     | `GET`         | -                           |
-| `/api/user/:id`  | `GET`         | `id` of type `Number`       |
+| Enpoint          | Method        | Params                      | Description                          |
+| ---------------- |:-------------:| :-------------------------- | ------------------------------------ |
+| `/api/hello`     | `GET`         | -                           | Returns hello message                |
+| `/api/user/:id`  | `GET`         | `id` of type `Number`       | Returns info about user with `id`    |
+| `/api/callback`  | `GET`         | `code` and `state` as query | Handles callback from `auth` service |
+| `/api/login`     | `GET`         | -                           | Starts login process                 |
+| `/api/logout`    | `GET`         | -                           | Starts logout process                |
 
 ## Scripts
 
@@ -111,3 +115,15 @@ Exports the next app as static version of the site to `out` directory.
 - Chakra UI
 - SWR
 - Auth0
+
+## Meta
+
+Sierikov Artem – [twitter](https://twitter.com/sierikov_)
+
+## Contribute
+
+1. Fork it (<https://github.com/sierikov/prisma/fork>)
+1. Create your feature branch (`git checkout -b feature/fooBar`)
+1. Commit your changes (`git commit -am 'Add some fooBar'`)
+1. Push to the branch (`git push origin feature/fooBar`)
+1. Create a new Pull Request
